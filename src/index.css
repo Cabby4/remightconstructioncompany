@@ -170,7 +170,7 @@ button, input, textarea, select {
 }
 
 .hero-image {
-  background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90');
+  background-image: url('/images/download (7).jpg');
   background-position: center 55%;
   background-size: cover;
   animation: heroReveal 1s ease-out both;
