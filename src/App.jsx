@@ -12,6 +12,8 @@ import {
   Phone,
   Mail,
   MapPin,
+  CalendarCheck,
+  Users,
 } from "lucide-react";
 
 const services = [
@@ -71,8 +73,7 @@ const projects = [
   {
     category: "COMMERCIAL BUILDINGS",
     title: "Commercial Building Developments",
-    image:
-      "/images/iyanoba 3.jpg",
+    image: "/images/iyanoba 3.jpg",
   },
   {
     category: "INTERIOR FINISHING",
@@ -84,6 +85,24 @@ const projects = [
     category: "RENOVATION PROJECTS",
     title: "Building Renovation & Upgrades",
     image: "/images/photo_2026-06-16_22-45-07.jpg",
+  },
+];
+
+const companyStats = [
+  {
+    icon: CalendarCheck,
+    number: "20+",
+    label: "Years of Experience",
+  },
+  {
+    icon: Building2,
+    number: "79",
+    label: "Projects Completed",
+  },
+  {
+    icon: Users,
+    number: "10+",
+    label: "Expert Team",
   },
 ];
 
@@ -275,6 +294,67 @@ function App() {
                   Get to Know Us <ArrowUpRight size={18} />
                 </a>
               </div>
+            </div>
+
+            {/* REMIGHT COMPANY STATISTICS */}
+            <div
+              className="row g-4 mt-5 pt-4 border-top"
+              aria-label="Remight company statistics"
+            >
+              {companyStats.map((stat) => {
+                const Icon = stat.icon;
+
+                return (
+                  <div
+                    className="col-12 col-sm-4"
+                    key={stat.label}
+                  >
+                    <div
+                      className="h-100 d-flex align-items-center gap-3 p-3 rounded-3"
+                      style={{
+                        backgroundColor: "#f8f9fb",
+                        border: "1px solid #e8edf3",
+                      }}
+                    >
+                      <div
+                        className="d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"
+                        style={{
+                          width: "54px",
+                          height: "54px",
+                          backgroundColor: "#102b50",
+                          color: "#d4ad55",
+                        }}
+                      >
+                        <Icon size={25} />
+                      </div>
+
+                      <div>
+                        <div
+                          className="fw-bold"
+                          style={{
+                            color: "#102b50",
+                            fontSize: "clamp(25px, 3vw, 34px)",
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {stat.number}
+                        </div>
+
+                        <div
+                          className="fw-semibold"
+                          style={{
+                            color: "#5a6472",
+                            fontSize: "13px",
+                            marginTop: "5px",
+                          }}
+                        >
+                          {stat.label}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -593,87 +673,84 @@ function App() {
         </section>
       </main>
 
-<footer className="footer">
-  <div className="container">
-    <div className="footer-main">
-     
-        <a className="navbar-brand brand footer-brand" href="#home">
-          <img
-            className="brand-logo"
-            src="/images/Main Logo.jpg"
-            alt="Remight logo"
-          />
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-main">
+            <a className="navbar-brand brand footer-brand" href="#home">
+              <img
+                className="brand-logo"
+                src="/images/Main Logo.jpg"
+                alt="Remight logo"
+              />
 
-          <span className="brand-text">
-            <strong>REMIGHT</strong>
-            <small>CONSTRUCTION & REAL ESTATE COMPANY</small>
-          </span>
-        </a>
+              <span className="brand-text">
+                <strong>REMIGHT</strong>
+                <small>CONSTRUCTION & REAL ESTATE COMPANY</small>
+              </span>
+            </a>
 
+            <p>
+              Building with purpose.
+              <br />
+              Investing with confidence.
+            </p>
 
-      <p>
-        Building with purpose.
-        <br />
-        Investing with confidence.
-      </p>
+            <a href="mailto:remightconstruction@gmail.com">
+              <Mail size={16} />
+              Get in touch
+            </a>
+          </div>
 
-      <a href="mailto:remightconstruction@gmail.com">
-        <Mail size={16} />
-        Get in touch
-      </a>
-    </div>
+          <div className="footer-links">
+            <div>
+              <h4>Quick Links</h4>
+              <a href="#home">Home</a>
+              <a href="#about">About Us</a>
+              <a href="#services">Our Services</a>
+              <a href="#projects">Our Projects</a>
+              <a href="#contact">Contact Us</a>
+            </div>
 
-    <div className="footer-links">
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Our Services</a>
-        <a href="#projects">Our Projects</a>
-        <a href="#contact">Contact Us</a>
-      </div>
+            <div>
+              <h4>Our Services</h4>
+              <a href="#services">Building Construction</a>
+              <a href="#services">Real Estate Consultancy</a>
+              <a href="#services">Project Management</a>
+              <a href="#projects">Flooring & Finishing</a>
+              <a href="#projects">Renovation Projects</a>
+            </div>
 
-      <div>
-        <h4>Our Services</h4>
-        <a href="#services">Building Construction</a>
-        <a href="#services">Real Estate Consultancy</a>
-        <a href="#services">Project Management</a>
-        <a href="#projects">Flooring & Finishing</a>
-        <a href="#projects">Renovation Projects</a>
-      </div>
+            <div>
+              <h4>Contact Information</h4>
+              <p>
+                <MapPin size={16} />
+                Ago-Okota Palace Way, Lagos, Nigeria
+              </p>
+              <a href="mailto:remightconstruction@gmail.com">
+                <Mail size={16} />
+                remightconstruction@gmail.com
+              </a>
+              <a
+                href="https://wa.me/8085447180"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Phone size={16} />
+                WhatsApp Enquiries
+              </a>
+            </div>
+          </div>
 
-      <div>
-        <h4>Contact Information</h4>
-        <p>
-          <MapPin size={16} />
-          Ago-Okota Palace Way, Lagos, Nigeria
-        </p>
-        <a href="mailto:remightconstruction@gmail.com">
-          <Mail size={16} />
-          remightconstruction@gmail.com
-        </a>
-        <a
-          href="https://wa.me/8085447180"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Phone size={16} />
-          WhatsApp Enquiries
-        </a>
-      </div>
-    </div>
+          <div className="footer-bottom">
+            <span>
+              © {new Date().getFullYear()} Remight Construction and Real Estate
+              Company. All rights reserved.
+            </span>
 
-    <div className="footer-bottom">
-      <span>
-        © {new Date().getFullYear()} Remight Construction and Real Estate
-        Company. All rights reserved.
-      </span>
-
-      <a href="#home">Back to top ↑</a>
-    </div>
-  </div>
-</footer>
-
+            <a href="#home">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
 
       <a
         className="floating-contact"
