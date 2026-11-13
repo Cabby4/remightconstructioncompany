@@ -62,7 +62,7 @@ const projects = [
     category: "CHURCH PROJECTS",
     title: "Church Construction & Development",
     image:
-      "https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1000&q=85",
+      "/images/download (3).jpg",
   },
   {
     category: "FOUNDATION WORKS",
